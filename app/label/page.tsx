@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Label() {
@@ -101,6 +103,19 @@ export default function Label() {
           className="absolute border-2 border-red-500"
           style={getBoundingBoxStyles()}
         />
+      )}
+      {startPoint && endPoint && (
+        <div className="absolute inset-0 flex items-end justify-center pb-6 z-10">
+          <Link href={"summary"}>
+            <Button
+              onMouseDown={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
+              className="bg-[#4e5d78] text-white hover:bg-[#3b4a62]"
+            >
+              Next
+            </Button>
+          </Link>
+        </div>
       )}
     </div>
   );
