@@ -19,19 +19,49 @@ export default function Label() {
     }
   }, []);
 
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setStartPoint({ x: e.clientX, y: e.clientY });
+  const handleStartDrawing = (clientX: number, clientY: number) => {
+    setStartPoint({ x: clientX, y: clientY });
     setEndPoint(null);
     setIsDrawing(true);
   };
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMoveDrawing = (clientX: number, clientY: number) => {
     if (!isDrawing || !startPoint) return;
-    setEndPoint({ x: e.clientX, y: e.clientY });
+    setEndPoint({ x: clientX, y: clientY });
+  };
+
+  const handleEndDrawing = () => {
+    setIsDrawing(false);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleStartDrawing(e.clientX, e.clientY);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleMoveDrawing(e.clientX, e.clientY);
   };
 
   const handleMouseUp = () => {
-    setIsDrawing(false);
+    handleEndDrawing();
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    handleStartDrawing(touch.clientX, touch.clientY);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    handleMoveDrawing(touch.clientX, touch.clientY);
+  };
+
+  const handleTouchEnd = () => {
+    handleEndDrawing();
   };
 
   const getBoundingBoxStyles = () => {
@@ -54,6 +84,9 @@ export default function Label() {
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {imageSrc && (
         <img
