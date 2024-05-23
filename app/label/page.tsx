@@ -49,13 +49,12 @@ export default function Label() {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    e.preventDefault();
     const touch = e.touches[0];
     handleStartDrawing(touch.clientX, touch.clientY);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent scroll on touch devices
     const touch = e.touches[0];
     handleMoveDrawing(touch.clientX, touch.clientY);
   };
@@ -87,6 +86,8 @@ export default function Label() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleEndDrawing} // Handle touch cancel to end drawing
+      style={{ touchAction: "none" }} // Disable default touch behavior
     >
       {imageSrc && (
         <img
