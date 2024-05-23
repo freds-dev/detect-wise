@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       <header className="flex h-16 items-center justify-between px-4 md:px-6">
-        <Link className="flex items-center" href="#">
+        <Link className="flex items-center" href="/">
           <MountainIcon className="h-6 w-6" />
           <span className="sr-only">Acme Inc</span>
         </Link>
