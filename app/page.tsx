@@ -54,9 +54,6 @@ export default function Home() {
             onChange={handleCapture}
             style={{ display: "none" }}
           />
-          {imageSrc && (
-            <img src={imageSrc} alt="Captured Image" className="mt-4" />
-          )}
         </div>
       </div>
     </main>
