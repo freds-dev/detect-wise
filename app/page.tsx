@@ -1,11 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChangeEvent, useRef, useState } from "react";
 
 export default function Home() {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const router = useRouter();
 
   const handleButtonClick = () => {
     fileInputRef.current?.click();
@@ -18,7 +19,10 @@ export default function Home() {
       const reader = new FileReader();
 
       reader.onloadend = () => {
-        setImageSrc(reader.result as string);
+        const imageData = reader.result as string;
+        setImageSrc(imageData);
+        localStorage.setItem("capturedImage", imageData);
+        router.push("/label");
       };
 
       reader.readAsDataURL(file);
@@ -53,12 +57,6 @@ export default function Home() {
           {imageSrc && (
             <img src={imageSrc} alt="Captured Image" className="mt-4" />
           )}
-          <Link
-            className="inline-flex items-center justify-center h-12 px-6 rounded-md border border-gray-200 bg-white text-gray-900 font-medium shadow-sm transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-100 dark:hover:bg-gray-800 dark:focus-visible:ring-gray-300"
-            href="#"
-          >
-            Try Model
-          </Link>
         </div>
       </div>
     </main>
