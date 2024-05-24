@@ -110,7 +110,7 @@ export default function Label() {
             <Button
               onMouseDown={(e) => e.stopPropagation()}
               onTouchStart={(e) => e.stopPropagation()}
-              className="bg-[#4e5d78] text-white hover:bg-[#3b4a62]"
+              className="bg-[#ac8337] text-white hover:bg-[#FFA500]"
             >
               Next
             </Button>
