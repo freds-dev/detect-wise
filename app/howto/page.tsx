@@ -1,3 +1,5 @@
+import Header from "@/components/ui/header";
+
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/3gqaO6s1KJ6
@@ -6,6 +8,7 @@
 export default function HowTo() {
   return (
     <>
+      <Header />
       <header className="bg-gray-900 py-12 text-center text-white">
         <h1 className="text-3xl font-bold">What is What?</h1>
         <p className="mt-4 max-w-md mx-auto text-gray-300">

@@ -1,8 +1,12 @@
+import Header from '@/components/ui/header'
 import { Selection } from '../../components/selection'
 
 export default function SelectionPage() {
 
     return (
-        <Selection />
+        <div>
+            <Header />
+            <Selection />
+        </div>
     )
 }

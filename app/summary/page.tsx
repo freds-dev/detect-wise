@@ -1,55 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  MenuIcon,
-  MountainIcon,
-  RocketIcon,
-} from "lucide-react";
+import Header from "@/components/ui/header";
+
 import Link from "next/link";
 
 export default function Summary() {
   return (
     <>
-      <header className="flex h-16 items-center justify-between px-4 md:px-6 bg-[#FFA500]">
-        <Link className="flex items-center gap-2" href="/">
-          <RocketIcon className="h-6 w-6 text-white" />
-          <span className="text-white font-bold text-2xl">DetectWise</span>
-        </Link>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button className="lg:hidden bg-[#FFA500]" size="icon">
-              <MenuIcon className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right">
-            <div className="grid gap-4 p-6">
-              <Link className="font-medium hover:underline" href="#">
-                Home
-              </Link>
-              <Link className="font-medium hover:underline" href="#">
-                About
-              </Link>
-              <Link className="font-medium hover:underline" href="#">
-                Services
-              </Link>
-              <Link className="font-medium hover:underline" href="#">
-                Contact
-              </Link>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </header>
+      <Header/>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6 max-w-6xl mx-auto bg-gray-100 dark:bg-gray-900">
         <ul className="grid grid-cols-1 gap-4">
           <li className="rounded-lg overflow-hidden transition-colors hover:bg-[#dcb0631f] duration-500 bg-white shadow-sm dark:bg-gray-950 flex items-center">

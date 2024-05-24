@@ -3,13 +3,14 @@
  * @see https://v0.dev/t/3aLPtGhWbmM
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+import Header from "@/components/ui/header";
 import Understand from "@/components/understand";
 import { JSX, SVGProps } from "react";
 
 export default function Component() {
     return (
         <>
-            
+            <Header />
             <main className="w-full max-w-6xl mx-auto py-12 md:py-24 lg:py-32 px-6">
                 <div className="space-y-6 md:space-y-10">
                     <div className="text-center">
