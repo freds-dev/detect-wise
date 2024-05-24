@@ -1,6 +1,5 @@
 "use client";
 
-import Header from "@/components/ui/header";
 import { RocketIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -8,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col">
-      <header className="bg-[#FFA500] py-4 px-6">
+        <header className="bg-[#FFA500] py-4 px-6">
           <div className="container mx-auto flex items-center justify-between">
             <Link className="flex items-center gap-2" href="#">
               <RocketIcon className="h-6 w-6 text-white" />
@@ -36,15 +35,15 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-[#FFA500] shadow transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#FFA500]"
-                href="#"
+                href="/help"
               >
                 Get Started with DetectWise
               </Link>
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border border-white px-6 text-sm font-medium text-white shadow transition-colors hover:bg-white hover:text-[#FFA500] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#FFA500]"
-                href="#"
+                href="https://rtod.vercel.app"
               >
-                Intuitive Data Collection
+                Live Model Testing
               </Link>
             </div>
           </div>
