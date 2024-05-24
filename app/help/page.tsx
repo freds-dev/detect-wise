@@ -77,7 +77,7 @@ export default function Component() {
                         </div>
                     </div>
                 </div>
-                <Understand />
+                {/* <Understand /> */}
             </main>
         </>
     );
