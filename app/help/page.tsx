@@ -9,12 +9,13 @@ import { JSX, SVGProps } from "react";
 export default function Component() {
     return (
         <>
+            
             <main className="w-full max-w-6xl mx-auto py-12 md:py-24 lg:py-32 px-6">
                 <div className="space-y-6 md:space-y-10">
                     <div className="text-center">
                         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">How does it work?</h1>
                         <p className="max-w-[700px] mx-auto mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                            On this page, you will find guides on how to use this app and explanations of why the steps shown are important in the context of machine learning. In this guide, you'll get a step-by-step explanation of how to perform object detection with <b>DetectWise</b>.
+                            On this page, you will find guides on how to use this app and explanations of why the steps shown are important in the context of machine learning. In this guide, youll get a step-by-step explanation of how to perform object detection with <b>DetectWise</b>.
                         </p>
                     </div>
                     <div className="grid gap-6 md:gap-10">
