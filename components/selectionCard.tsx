@@ -36,7 +36,8 @@ export default function SelectionCard(vars: { title: string, fileUrl: string }) 
     };
     return (
         <div
-            className="block cursor-pointer w-full max-w-sm rounded-lg overflow-hidden shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl" onClick={handleButtonClick}
+            className="block w-full max-w-sm rounded-lg overflow-hidden shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl mb-4" onClick={handleButtonClick}
+
         >
             <img
                 alt={vars.title}
