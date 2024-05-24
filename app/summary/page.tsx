@@ -10,20 +10,24 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { CircleCheckIcon, MenuIcon, MountainIcon } from "lucide-react";
+import {
+  MenuIcon,
+  MountainIcon,
+  RocketIcon,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Summary() {
   return (
     <>
-      <header className="flex h-16 items-center justify-between px-4 md:px-6">
-        <Link className="flex items-center" href="/">
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+      <header className="flex h-16 items-center justify-between px-4 md:px-6 bg-[#FFA500]">
+        <Link className="flex items-center gap-2" href="/">
+          <RocketIcon className="h-6 w-6 text-white" />
+          <span className="text-white font-bold text-2xl">DetectWise</span>
         </Link>
         <Sheet>
           <SheetTrigger asChild>
-            <Button className="lg:hidden" size="icon" variant="outline">
+            <Button className="lg:hidden bg-[#FFA500]" size="icon">
               <MenuIcon className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
@@ -48,7 +52,7 @@ export default function Summary() {
       </header>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6 max-w-6xl mx-auto bg-gray-100 dark:bg-gray-900">
         <ul className="grid grid-cols-1 gap-4">
-          <li className="rounded-lg overflow-hidden bg-white shadow-sm dark:bg-gray-950 flex items-center">
+          <li className="rounded-lg overflow-hidden transition-colors hover:bg-[#dcb0631f] duration-500 bg-white shadow-sm dark:bg-gray-950 flex items-center">
             <img
               alt="May 1, 2023 - 10:30 AM"
               className="w-16 h-16 object-cover"
@@ -75,7 +79,7 @@ export default function Summary() {
               </Link>
             </div>
           </li>
-          <li className="rounded-lg overflow-hidden bg-white shadow-sm dark:bg-gray-950 flex items-center">
+          <li className="rounded-lg overflow-hidden transition-colors hover:bg-[#dcb0631f] duration-500 bg-white shadow-sm dark:bg-gray-950 flex items-center">
             <img
               alt="May 15, 2023 - 2:45 PM"
               className="w-16 h-16 object-cover"
@@ -102,7 +106,7 @@ export default function Summary() {
               </Link>
             </div>
           </li>
-          <li className="rounded-lg overflow-hidden bg-white shadow-sm dark:bg-gray-950 flex items-center">
+          <li className="rounded-lg overflow-hidden transition-colors hover:bg-[#dcb0631f] duration-500 bg-white shadow-sm dark:bg-gray-950 flex items-center">
             <img
               alt="June 1, 2023 - 9:00 AM"
               className="w-16 h-16 object-cover"
@@ -129,7 +133,7 @@ export default function Summary() {
               </Link>
             </div>
           </li>
-          <li className="rounded-lg overflow-hidden bg-white shadow-sm dark:bg-gray-950 flex items-center">
+          <li className="rounded-lg overflow-hidden transition-colors hover:bg-[#dcb0631f] duration-500 bg-white shadow-sm dark:bg-gray-950 flex items-center">
             <img
               alt="June 15, 2023 - 4:30 PM"
               className="w-16 h-16 object-cover"
@@ -156,7 +160,7 @@ export default function Summary() {
               </Link>
             </div>
           </li>
-          <li className="rounded-lg overflow-hidden bg-white shadow-sm dark:bg-gray-950 flex items-center">
+          <li className="rounded-lg overflow-hidden transition-colors hover:bg-[#dcb0631f] duration-500 bg-white shadow-sm dark:bg-gray-950 flex items-center">
             <img
               alt="July 1, 2023 - 11:15 AM"
               className="w-16 h-16 object-cover"
