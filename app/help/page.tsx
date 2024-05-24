@@ -3,10 +3,8 @@
  * @see https://v0.dev/t/3aLPtGhWbmM
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Progress } from "@/components/ui/progress"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import Understand from "@/components/understand"
-import { JSX, SVGProps } from "react"
+import Understand from "@/components/understand";
+import { JSX, SVGProps } from "react";
 
 export default function Component() {
     return (
@@ -14,9 +12,9 @@ export default function Component() {
             <main className="w-full max-w-6xl mx-auto py-12 md:py-24 lg:py-32 px-6">
                 <div className="space-y-6 md:space-y-10">
                     <div className="text-center">
-                        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Wie geht das?</h1>
+                        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">How does it work?</h1>
                         <p className="max-w-[700px] mx-auto mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                            Auf dieser Seite findet ihr Hilfestellungen dazu, wie man diese App benutzt desweiteren wird erklärt, wofür die gezeigten Schritte im Kontext des maschinellem Lernen wichtig sind. In dieser Anleitung kriegt Ihr Schritt-für-Schritt erklärt, wie Ihr eine Objekterkennung mit <b>DetectWise</b> durchführen könnt.
+                            On this page, you will find guides on how to use this app and explanations of why the steps shown are important in the context of machine learning. In this guide, you'll get a step-by-step explanation of how to perform object detection with <b>DetectWise</b>.
                         </p>
                     </div>
                     <div className="grid gap-6 md:gap-10">
@@ -25,9 +23,9 @@ export default function Component() {
                                 <CheckIcon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Wähle ein Objekt</h3>
+                                <h3 className="text-xl font-semibold">Choose an Object</h3>
                                 <p className="text-gray-500 dark:text-gray-400">
-                                    Um eine Objekterkennung durchführen zu können, benötigen wir zunächst einmal ein konkrete Objektart, welche wir detektieren wollen. Dazu könnt ihr in diesem Schritt eine der Kategorien auswählen, von welcher Ihr anschließend Trainingsbilder erfassen wollt.
+                                    To perform object detection, we first need to select a specific type of object we want to detect. In this step, you can choose one of the categories from which you will later capture training images.
                                 </p>
                             </div>
                         </div>
@@ -36,10 +34,9 @@ export default function Component() {
                                 <CameraIcon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Fotografiere dein Objekt</h3>
+                                <h3 className="text-xl font-semibold">Photograph Your Object</h3>
                                 <p className="text-gray-500 dark:text-gray-400">
-                                Jetzt kommt auch schon die schwierigste Aufgabe. Finde ein Objekt von der Art die du gerade ausgewählt hast.
-                                    Dafür musst du möglicherweise erst ein paar Schritte gehen. Wenn du das Objekt gefunden hast, fotografiere es.
+                                    Now comes the most challenging task. Find an object of the type you just selected. You may need to walk around a bit to find it. Once you find the object, take a picture of it.
                                 </p>
                             </div>
                         </div>
@@ -48,10 +45,9 @@ export default function Component() {
                                 <PencilIcon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Markiere das Objekt</h3>
+                                <h3 className="text-xl font-semibold">Mark the Object</h3>
                                 <p className="text-gray-500 dark:text-gray-400">
-                                    Nachdem du das Objekt fotografiert hast, markiere es in dem Bild. Das hilft dem Modell später dabei, das Objekt zu erkennen. Dazu kannst
-                                    du einfach mit dem Finger oder einem Stift auf das Display tippen. Eine bereits vorhandene Markierung kannst du auch nochmal bearbeiten.
+                                    After you have photographed the object, mark it in the image. This helps the model recognize the object later. You can simply tap on the display with your finger or a stylus. You can also edit an existing mark if needed.
                                 </p>
                             </div>
                         </div>
@@ -60,11 +56,9 @@ export default function Component() {
                                 <BadgeIcon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Bekomme Auszeichungen für deine Leistungen!</h3>
+                                <h3 className="text-xl font-semibold">Earn Rewards for Your Efforts!</h3>
                                 <p className="text-gray-500 dark:text-gray-400">
-                                    Nun kannst du deine Objekterkennung abschicken. Ein von uns entwickeltes Modell wird dein Bild analysieren und dir eine Auszeichnung geben, wenn du das Objekt korrekt markiert hast.
-                                    Umso mehr Auszeichnungen wir sammeln, desto besser wird unser Modell. Also sei fleißig und markiere so viele Objekte wie möglich! Falls das Objekt nicht korrekt markiert wurde, wirst du wieder zum Schritt <b>Fotografiere das Objekt</b> gebracht.
-                                    Dies ist nicht schlimm, denn so lernst du auch, wie man die Objekte noch besser markieren kann.
+                                    Now you can submit your object detection. Our developed model will analyze your image and give you a reward if you correctly marked the object. The more rewards we collect, the better our model becomes. So be diligent and mark as many objects as possible! If the object is not correctly marked, you will be taken back to the <b>Photograph the Object</b> step. This is not a problem, as it helps you learn how to mark objects better.
                                 </p>
                             </div>
                         </div>
@@ -73,10 +67,9 @@ export default function Component() {
                                 <LightbulbIcon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold">Lerne etwas neues!</h3>
+                                <h3 className="text-xl font-semibold">Learn Something New!</h3>
                                 <p className="text-gray-500 dark:text-gray-400">
-                                    Nun kannst du mit dem markieren von weiteren Objekten fortfahren. Je mehr Objekte du markierst, desto besser wird unser Modell. Du kannst auch gerne verschiedene Objekte markieren, um zu sehen, wie gut unser Modell bereits funktioniert.
-                                    Gerne kannst du dir auch die Lernblätter durchlesen um die Hintergründe zu verstehen. 
+                                    Now you can continue marking more objects. The more objects you mark, the better our model becomes. Feel free to mark different objects to see how well our model already works. You can also read the learning sheets to understand the background information.
                                 </p>
                             </div>
                         </div>
@@ -85,7 +78,7 @@ export default function Component() {
                 <Understand />
             </main>
         </>
-    )
+    );
 }
 
 function BadgeIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
