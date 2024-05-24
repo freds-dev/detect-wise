@@ -105,7 +105,7 @@ export default function Label() {
         />
       )}
       {startPoint && endPoint && (
-        <div className="absolute inset-0 flex items-end justify-center pt-6 z-10">
+        <div className="absolute inset-0 flex items-start justify-center pt-6 z-10">
           <Link href={"summary"}>
             <Button
               onMouseDown={(e) => e.stopPropagation()}
