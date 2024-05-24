@@ -36,8 +36,8 @@ export default function SelectionCard(vars: { title: string, fileUrl: string }) 
     };
     return (
         <div
-            className="block w-full max-w-sm rounded-lg overflow-hidden shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl mb-4" onClick={handleButtonClick}
-
+            className="block w-full max-w-sm rounded-lg overflow-hidden shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl mb-4 group" 
+            onClick={handleButtonClick}
         >
             <img
                 alt={vars.title}
@@ -50,17 +50,20 @@ export default function SelectionCard(vars: { title: string, fileUrl: string }) 
                 }}
                 width="400"
             />
-            <div className="px-6 py-4 bg-gray-900 text-white">
+            <div className="px-6 py-4 text-white transition-colors duration-300 bg-[#FFA500] group-hover:bg-red-400">
                 <h2 className="font-bold text-xl mb-2">{vars.title}</h2>
             </div>
             <input
-            type="file"
-            accept="image/*"
-            capture="environment"
-            ref={fileInputRef}
-            onChange={handleCapture}
-            style={{ display: "none" }}
-          />
+                type="file"
+                accept="image/*"
+                capture="environment"
+                ref={fileInputRef}
+                onChange={handleCapture}
+                style={{ display: "none" }}
+            />
         </div>
     )
+    
+    
+    
 }

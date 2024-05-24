@@ -8,7 +8,22 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col">
-        <Header />
+      <header className="bg-[#FFA500] py-4 px-6">
+          <div className="container mx-auto flex items-center justify-between">
+            <Link className="flex items-center gap-2" href="#">
+              <RocketIcon className="h-6 w-6 text-white" />
+              <span className="text-white font-bold text-2xl">DetectWise</span>
+            </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                className="inline-flex h-9 items-center justify-center rounded-md border border-white px-4 text-sm font-medium text-white shadow transition-colors hover:bg-white hover:text-[#FFA500] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#FFA500]"
+                href="/selection"
+              >
+                Demo
+              </Link>
+            </div>
+          </div>
+        </header>
         <section className="w-full py-20 md:py-32 lg:py-40 bg-gradient-to-r from-[#FFA500] to-[#FF6B6B]">
           <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
