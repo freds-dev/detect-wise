@@ -107,7 +107,7 @@ export default function Home() {
               </Link>
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border border-[#FFA500] px-6 text-sm font-medium text-[#FFA500] shadow transition-colors hover:bg-[#FFA500] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFA500] focus:ring-offset-2"
-                href="#"
+                href="/howto"
               >
                 Learn More
               </Link>
