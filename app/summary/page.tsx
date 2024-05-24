@@ -1,7 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MenuIcon, MountainIcon } from "lucide-react";
+import { CircleCheckIcon, MenuIcon, MountainIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Summary() {
